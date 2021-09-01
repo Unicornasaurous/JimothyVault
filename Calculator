@@ -1,0 +1,32 @@
+name = input("What is your name? ")
+choice = input("Hi, " + name + ". " + "Would you like me to do some math for you? ")
+
+if choice == "Yes" or "Sure" or "yes" or "sure":
+    operation = input("Okay, enter a basic math problem for me. ")
+elif choice == "No" or "Nah" or "nah" or "no":
+    print("Okay. Sorry to hear that, you math hating bitch.")
+else:
+    print("Do you know english, " + name + "?")
+    
+def Convert(string):
+    li = list(string.split(" "))
+    return li
+str1 = operation
+Problem_list = Convert(str1)
+
+if Problem_list[1] == "+":
+    answer = (float(Problem_list[0]) + float(Problem_list[2]))
+if Problem_list[1] == "-":
+    answer = (float(Problem_list[0]) - float(Problem_list[2]))
+if Problem_list[1] == "/":
+    answer = (float(Problem_list[0]) / float(Problem_list[2]))
+if Problem_list[1] == "*":
+    answer = (float(Problem_list[0]) * float(Problem_list[2]))
+else:
+    print("The problem is either too complex or in the wrong format(add spaces)")
+
+print("The answer is ", answer)
+
+
+
+
