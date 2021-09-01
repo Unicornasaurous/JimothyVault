@@ -1,0 +1,50 @@
+#!/bin/python3
+
+try:
+
+    name = input("What is your name? ")
+    choice = input("Hi, " + name + ". " + "Would you like me to do some math for you? ")
+
+    operation = ""
+
+    if choice == "yes":
+        operation += str(input("Okay, enter a basic math problem for me. "))
+    elif choice == "no":
+        print("Okay. Sorry to hear that, you math hating bitch.")
+        exit()
+
+    else:
+        print("Do you know english, " + name + "?")
+
+
+    def convert(string):
+        for char in string: return char
+
+
+    Problem_list = convert(operation)
+
+
+    try:
+        if Problem_list[1] == "+":
+            answer = (float(Problem_list[0]) + float(Problem_list[2]))
+
+        elif Problem_list[1] == "-":
+            answer = (float(Problem_list[0]) - float(Problem_list[2]))
+
+        elif Problem_list[1] == "/":
+            answer = (float(Problem_list[0]) / float(Problem_list[2]))
+
+        elif Problem_list[1] == "*":
+            answer = (float(Problem_list[0]) * float(Problem_list[2]))
+
+        else:
+            answer = "unknown"
+            print("The problem is either too complex or is in the wrong format(hint: use spaces)")
+
+        print("The answer is ", answer)
+
+    except TypeError: exit()
+
+except KeyboardInterrupt: print('Toodaloo!')
+
+
