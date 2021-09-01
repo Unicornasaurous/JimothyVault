@@ -3,10 +3,10 @@
 name = input("What is your name? ")
 
 def ChoiceTaker():
-    choice = str(input("Hi, "name". \nWould you like me to do some math for you? \nType either y or n --|: ")).lower()
+    choice = str(input("Hi, " + name + ". \nWould you like me to do some math for you? \nType either y or n --|: ")).lower()
 
     if choice == "y":
-        return InputOperation():
+        return InputOperation()
 
     elif choice == "n":
         print("Oh. Okay. Sorry to hear that, you math hating bitch.")
@@ -35,10 +35,11 @@ def BufferValidation(OperationArray):
 
 
 def OperatorArray():
-    return BufferValidation(ArithemeticBuffer(InputOperation()))
+    return BufferValidation(ArithemeticBuffer(InputOperation(ChoiceTaker())))
 
 
 def InitCalculator():
+    ChoiceTaker()
     OperatorArray()
     A = OperationArray[0]
     OPERATOR = OperationArray[1]
