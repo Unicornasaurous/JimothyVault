@@ -58,3 +58,4 @@ def ArithemeticSolve(IntegerA, Operator, IntegerB):
         else: return (float(A) / float(B))
 
 
+InitCalculator()
