@@ -1,10 +1,20 @@
 name = input("What is your name? ")
-choice = input("Hi, " + name + ". " + "Would you like me to do some math for you? ")
+choice = str(input("Hi, "name". \nWould you like me to do some math for you? --|: "))"""  I kinda scrunched up the formatting for readability;
+                                                                                          gave a more unix styled prompt.
+                                                                                          
+                                                                                            --Thats a me thing, not you.
+                                                                                          
+                                                                                          Also, when accepting input like this it's best to convert
+                                                                                          it to string at initialization via:
+                                                                                          str(input("Now numbers won't fuck the system up.")) """
 
-if choice == "Yes" or "Sure" or "yes" or "sure":
+if choice == "Yes" or "Sure" or "yes" or "sure" or "y" or "1":
     operation = input("Okay, enter a basic math problem for me. ")
+
 elif choice == "No" or "Nah" or "nah" or "no":
     print("Okay. Sorry to hear that, you math hating bitch.")
+    exit()# <--------------------------------------------------------------- The problem was the lack of this
+
 else:
     print("Do you know english, " + name + "?")
     
@@ -14,6 +24,14 @@ def Convert(string):
 str1 = operation
 Problem_list = Convert(str1)
 
+"""
+I think the issue may be somewhere in this block;
+i think there's a negative logic we can apply here
+to forgo the else statement entirely by
+breaking with an error message ONLY if the 4 operaters
+aren't found at Problem_list[0]
+
+"""
 if Problem_list[1] == "+":
     answer = (float(Problem_list[0]) + float(Problem_list[2]))
 if Problem_list[1] == "-":
@@ -22,8 +40,13 @@ if Problem_list[1] == "/":
     answer = (float(Problem_list[0]) / float(Problem_list[2]))
 if Problem_list[1] == "*":
     answer = (float(Problem_list[0]) * float(Problem_list[2]))
-else:
-    print("The problem is either too complex or in the wrong format(add spaces)")
+
+# I'mma comment out the offending else statement
+# in an effort to let you try to figure it out yourself...
+# while I try to figure it out myself.
+#
+#else:
+#    print("The problem is either too complex or in the wrong format(add spaces)")
 
 print("The answer is ", answer)
 
