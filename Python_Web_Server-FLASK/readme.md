@@ -39,3 +39,15 @@ Bare-minimum, flask only needs about 5 lines to get off the ground.
 > @app.route("/")  
 > def hello_world():  
 >> return str("Hello, World!")
+
+With these lines saved to a .py file the next step is to alter the shell  
+variable $FLASK_APP to point to the file; and then run flask.
+
+> export FLASK_APP=/path/to/FlaskApp.py
+> flask run
+
+Note that a naked flask run will ONLY be accessible from the localhost.  
+To get the server running publicly you have to alter the flask run command like:
+
+> flask run host='192.168.1.1'
+
