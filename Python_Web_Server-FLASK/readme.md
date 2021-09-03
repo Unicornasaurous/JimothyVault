@@ -30,13 +30,18 @@ separate from the main server-space. We need to download Flask, so:
 
 ----------------------------------------------------------------------
 
+
+
+
+
+
 ## Create your application
 
 Bare-minimum, flask only needs about 5 lines to get off the ground.
 
 > from flask import Flask  
 > app = Flask(__name__)  
-> @app.route("/")  
+> @app.route("/Hello_World")  
 > def hello_world():  
 >> return str("Hello, World!")
 
@@ -50,4 +55,29 @@ Note that a naked flask run will ONLY be accessible from the localhost.
 To get the server running publicly you have to alter the flask run command like:
 
 > flask run host='192.168.1.1'
+
+----------------------------------------------------------------------
+
+
+
+
+
+## Going deeper
+
+Lets take a look at that @app.route("/") decorator for a bit.  
+It takes a string argument, which must at least contain a  
+forward slash.  
+
+You can also pass an argument this way;
+enscapulated with an opening caret, <, and a closing caret, >.  
+
+So if we add a second decorator with the argument "/hello/<name>"  
+the argument $name can be passed to whatever function defined  
+at that route a la:
+
+> @app.route("/Hello/<name>")  
+> def hello(name):  
+>> return ("Hello, " + str(name))  
+
+----------------------------------------------------------------------
 
