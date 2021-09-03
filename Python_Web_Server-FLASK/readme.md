@@ -32,10 +32,10 @@ separate from the main server-space. We need to download Flask, so:
 
 ## Create your application
 
-Bare-minimum, flask only needs about 4 lines to get off the ground.
+Bare-minimum, flask only needs about 5 lines to get off the ground.
 
-> from flask import Flask
-> app = Flask(__name__)
-> @app.route("/")
-> def hello_world():
->     return "<p>Hello, World!</p>"
+> from flask import Flask\n
+> app = Flask(__name__)\n
+> @app.route("/")\n
+> def hello_world():\n
+>     return "<p>Hello, World!</p>"\n
