@@ -1,3 +1,4 @@
+from random import *
 def find_index(l1, element):
     counter = -1
     for index in l1:
@@ -11,14 +12,20 @@ def find_number(l1, loc):
         counter2 += 1
         if counter2 == loc:
             return index2
-
+    
 start_over = True
 
 while start_over:
+    def random_list_maker():
+        random_list = []
+        for i in range(10):
+            n = randint(1, 100)
+            random_list.append(n)
+        return random_list
+    listboi = random_list_maker()
     array_counter = -1
-    random_list = [2, 5, 3, 23, 555, 33, 2244, 1, 0, 66]
     print("There is an array of random numbers. The numbers go as followed: ")
-    for rando in random_list:
+    for rando in listboi:
         array_counter += 1
         print(str(array_counter) + ")" + " " + str(rando))
 
@@ -63,10 +70,10 @@ while start_over:
     repeat = True
 
     if index:
-        result1 = find_index(random_list, num)
+        result1 = find_index(listboi, num)
         print("The index of this number is: " + str(result1))
     elif index_number:
-        result2 = find_number(random_list, num2)
+        result2 = find_number(listboi, num2)
         print("The number of this index is: " + str(result2))
     
     while repeat2:
