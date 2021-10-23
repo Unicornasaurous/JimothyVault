@@ -1,17 +1,19 @@
 from random import *
 def find_index(l1, element):
     counter = -1
+    numbois = []
     for index in l1:
         counter += 1
         if element == index:
-            return counter
+            numbois.append(counter)
+    return numbois
 
 def find_number(l1, loc):
     counter2 = -1
     for index2 in l1:
         counter2 += 1
         if counter2 == loc:
-            return index2
+             return index2
     
 start_over = True
 
@@ -19,7 +21,7 @@ while start_over:
     def random_list_maker():
         random_list = []
         for i in range(10):
-            n = randint(1, 100)
+            n = randint(1, 10)
             random_list.append(n)
         return random_list
     listboi = random_list_maker()
