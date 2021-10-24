@@ -1,0 +1,28 @@
+body {
+    background-color:rgb(123, 123, 167)   
+    }
+
+img.displayed {
+    width:30%;
+    margin: auto;
+    display: block;
+    }
+
+h1 {
+    text-align: center;
+    color:rgb(0, 0, 0);
+    display: block;
+    }
+
+input{
+    margin: 0 auto;
+    display: block;
+    }
+
+form p {
+    text-align:center;
+    color:white;
+    display: block;
+    position: relative;
+    bottom: 225px
+    }
