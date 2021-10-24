@@ -18,5 +18,5 @@ def index():
     elif request.method == 'GET':
         return render_template('index.html')
 
-#if __name__ == '__main__':
-    #app.run(host="localhost", port=80, debug=True)
+if __name__ == '__main__':
+    app.run(host="localhost", port=8080, debug=True)
