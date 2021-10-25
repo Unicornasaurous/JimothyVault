@@ -1,1 +1,1 @@
-from flask_ball.py import app as application
+from flask_ball.py import EightBall as application
