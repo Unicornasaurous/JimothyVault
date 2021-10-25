@@ -1,3 +1,4 @@
+#/bin/python3
 from os import read
 from flask import Flask, render_template, request, flash
 from random import *
