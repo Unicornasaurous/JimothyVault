@@ -20,7 +20,7 @@ readings = [# More answers; Better formatting.
 def reader(): return choice(readings)# One-Liner; make it so.
 EightBall = Flask(__name__); EightBall.secret_key = "ramen"# Related;
 
-@EightBalll.route("/", methods=["POST", "GET"])
+@EightBall.route("/", methods=["POST", "GET"])
 def index():
 
     if request.method == 'POST':
