@@ -17,3 +17,8 @@
 """
 from flask_ball.py import create_app
 application = create_app()
+"""
+  Git gives a warning here ^^^ about
+  this either being an error or
+  not really being needed.
+"""
