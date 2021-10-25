@@ -15,10 +15,13 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
-from flask_ball.py import create_app
-application = create_app()
+#from flask_ball.py import create_app
+#application = create_app()
+
 """
   Git gives a warning here ^^^ about
   this either being an error or
   not really being needed.
+
+  Commenting out to avoid EOF error.
 """
